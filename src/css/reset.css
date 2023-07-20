@@ -1,19 +1,14 @@
+html{
+  font-size: 62.5%;
+}
 * {
     margin: 0;
     padding: 0;
-    border: 0;
-    font-size: 100%;
-    font: inherit;
-    vertical-align: baseline;
-    box-sizing: border-box;
-    max-width: 1920px;
-    max-height: 1080px;
+    text-decoration: none;
+    font-family: 'Roboto', sans-serif; 
+    box-sizing:border-box;
   }
   
   ul {
     list-style: none;
-  }
-
-  a{
-    text-decoration: none;
   }

@@ -1,66 +1,88 @@
-.main{
-    display: grid;
-    grid-template-columns: 119px auto 119px;
-    place-items: center;
-    flex-direction: row;
-    background-image: url("../img/imagem.png");;
-    width: 1920px;
-    height: 1080px;
-}
-
-.btn{ 
-    background-color: transparent;
-    width: 49px;
-    height: 78px;
-}
-.left{
-    margin-left: 70px;
-}
-.right{
-    margin-right: 70px;
-}
-.conteiner{
+.imagens-slider{
+    height: 100vh;
+    position: relative;
     display: flex;
-    width: 100%;
-    height:100%
+    align-items: center;
 }
 
-.main_text{
-    margin-left: 61px;
-    margin-right: 61px;
-    padding: 60px 65px;
-    align-self: center;
-    
+.imagens-slider .slide{
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 100vw;
+    height: 100%;
+    position: absolute;
+    opacity: 0;
+    transition: 0.5% ease-out;
+    display: flex;
+    align-items: center;
+}
+
+.imagens-slider .slide.mostrar{
+    opacity: 1;
+}
+
+.slide-rosa{
+    background-image: url('../img/rosa.png');
+}
+.slide-amarelo{
+    background-image: url('../img/amarelo.png');
+}
+.slide-azul{
+    background-image: url('../img/azul.png');
+}
+.slide-laranja{
+    background-image: url('../img/laranja.png');
+}
+.seta-esquerda, .seta-direita{
+    position: absolute;
+    z-index: 1;
+    width: 50px;
+    height: 50px;
+}
+
+.seta-esquerda{
+    left: 4%;
+}
+.seta-direita{
+    right: 4%;
+    transform: rotateY(180deg);
+}
+.opacidade{
+    opacity: 0.5;
+    cursor: default;
+}
+
+.conteudo{
     background-color: white;
+    margin-left: 180px;
+    padding: 65px 60px;
     width: 620px;
-    height: 700px;
+    border-radius: 10px;
 }
-
-.title{
-    color: #000;
-    font-family: Roboto;
-    font-size: 50px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
+.titulo{
+    font-size: 3rem;
+    font-weight: 700;
     margin-bottom: 80px;
 }
-
-.text_content{
-    color: #000;
-    font-family: Roboto;
-    font-size: 25px;
-    font-style: normal;
+.texto{
+    font-size: 2.5rem;
     font-weight: 300;
-    line-height: 35px;
     margin-bottom: 50px;
 }
-
-.saiba_mais{
-    color: #C50000;
-    font-family: Roboto;
-    font-size: 30px;
-    font-style: normal;
+.botao{
+    font-size: 3rem;
     font-weight: 700;
-    line-height: normal;
+}
+.botao.rosa{
+    color: red;
+}
+.botao.amarelo{
+    color:yellow
+}
+.botao.azul{
+    color:cornflowerblue
+}
+.botao.laranja{
+    color: orange;
 }
